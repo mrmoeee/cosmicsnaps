@@ -35,14 +35,19 @@ class SessionForm extends React.Component{
   }
 
   render() {
+    let display;
+    if (this.props.formType === "signup") {
+      display = "Already have an account?";
+    } else {
+      display = "Don't have an account?";
+    }
+    console.log(this.props.formType);
     return (
       <div className="formType-form-container">
         <form onSubmit={this.handleSubmit} className="formType-form-box">
           Welcome to CosmicSnaps !
           <br />
 
-          {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
           <div className="formType-form">
             <br/>
 
@@ -68,6 +73,8 @@ class SessionForm extends React.Component{
               type="submit"
               value={this.props.formType}
               />
+            {this.renderErrors()}
+            {display} {this.props.navLink}
           </div>
         </form>
       </div>

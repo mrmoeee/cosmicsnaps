@@ -44,7 +44,7 @@ class User < ApplicationRecord
 
   def generate_unique_session_token
     self.session_token = generate_session_token
-    while User.find_by({session_token: self.session_token})
+    while User.find_by(session_token: self.session_token)
       self.session_token = generate_session_token
     end
     self.session_token

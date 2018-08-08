@@ -18,18 +18,18 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const signup = (user) => dispatch => {
-  return APIUtil.signup(user)
-    .then(dispatch(receiveCurrentUser(user)),
+export const signup = (formUser) => dispatch => {
+  return APIUtil.signup(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)),
     err => (
       dispatch(receiveErrors(err.responseJSON))
     )
   );
 };
 
-export const login = (user) => dispatch => {
-  return APIUtil.login(user)
-    .then(dispatch(receiveCurrentUser(user)),
+export const login = (formUser) => dispatch => {
+  return APIUtil.login(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)),
     err => (
       dispatch(receiveErrors(err.responseJSON))
     )
@@ -38,5 +38,5 @@ export const login = (user) => dispatch => {
 
 export const logout = () => dispatch => {
   return APIUtil.logout()
-    .then(dispatch(logoutCurrentUser()));
+    .then( () => dispatch(logoutCurrentUser()));
 };
