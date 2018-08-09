@@ -45,7 +45,7 @@ class SessionForm extends React.Component{
     return (
       <div className="formType-form-container">
         <form onSubmit={this.handleSubmit} className="formType-form-box">
-          Welcome to CosmicSnaps !
+          
           <br />
 
           <div className="formType-form">
