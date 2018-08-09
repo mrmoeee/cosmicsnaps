@@ -41,11 +41,10 @@ class SessionForm extends React.Component{
     } else {
       display = "Don't have an account?";
     }
-    console.log(this.props.formType);
     return (
       <div className="formType-form-container">
         <form onSubmit={this.handleSubmit} className="formType-form-box">
-          
+
           <br />
 
           <div className="formType-form">
