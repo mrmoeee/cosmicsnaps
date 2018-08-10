@@ -1,24 +1,54 @@
-.h1-container {
-  display: table;
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100%;
-  height: 100%;
-  text-align: center;
 
-  .h1-test {
-    z-index: 100;
+  .text-block {
+    justify-content: center;
+    align-items: center;
     position: absolute;
+    text-align: center;
+
+    font-family: 'Raleway';
+    text-shadow: 1px 1px 10px black;
     color: white;
-    font-size: 24px;
-    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
 
-  }
+    .h1-test {
+      font-size: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 0;
+      color: white;
+    }
 
-  .h2-test {
-    z-index: 100;
-    position: absolute;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    .h2-test {
+      font-size: 24px;
+      font-weight: 100px;
+    }
 
+    .demo-container {
+      margin-top: 40px;
+      padding: 0 30px;
+
+      .demo {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 35px;
+        padding: 8px 16px;
+        box-shadow: 1px 1px 10px white;
+        // border: 1px solid white;
+        color: white;
+
+        background-color: #CB95BF;
+      }
+      .demo:hover {
+        background-color: #10082C;
+      }
+    }
   }
 }
