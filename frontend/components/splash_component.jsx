@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageComponent from './image_component';
 import { Link } from 'react-router-dom';
-
+import DemoContainer from './demo_user/demo_container';
 const SplashComponent = () => {
 
   return (
@@ -15,9 +15,7 @@ const SplashComponent = () => {
         <div className="h2-container">
           <h2 className="h2-test">Experience more than a pale blue dot</h2>
         </div>
-        <div className="demo-container">
-          <Link className="demo" to="/signup">DEMO LOGIN</Link>
-        </div>
+        <DemoContainer />
       </div>
     </div>
   );

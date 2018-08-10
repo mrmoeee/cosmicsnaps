@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# ADD FIRST NAME AND LAST NAME TO FORM SHEET?
+User.create(username: "carlsagan", password: "123456");

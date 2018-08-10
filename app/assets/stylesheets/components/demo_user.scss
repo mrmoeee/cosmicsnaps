@@ -1,0 +1,21 @@
+.demo-container {
+
+  margin-top: 40px;
+  padding: 0 30px;
+
+  .demo {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 35px;
+    padding: 8px 16px;
+    box-shadow: 1px 1px 10px white;
+    // border: 1px solid white;
+    color: white;
+    background-color: #CB95BF;
+  }
+  .demo:hover {
+    cursor: pointer;
+    background-color: #2A0C3C;
+  }
+}
