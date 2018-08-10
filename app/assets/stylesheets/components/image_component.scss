@@ -1,10 +1,7 @@
-.img-container{
-  position: relative;
 
-  .img-box {
-    position: absolute;
-    width: 100%;
-    margin-top: -70px;
-    z-index: -1;
-  }
+.img-box {
+  position: relative;
+  width: 100%;
+  margin-top: -70px;
+  z-index: -1;
 }
