@@ -2,6 +2,7 @@ import React from 'react';
 import ImageComponent from './image_component';
 import { Link } from 'react-router-dom';
 import DemoContainer from './demo/demo_container';
+import FooterLinks from './footer_component';
 
 const SplashComponent = () => {
   return (
@@ -18,7 +19,11 @@ const SplashComponent = () => {
           <DemoContainer />
         </div>
       </div>
+      <footer>
+        <FooterLinks />
+      </footer>
     </div>
+
   );
 };
 
