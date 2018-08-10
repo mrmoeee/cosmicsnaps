@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageComponent from './image_component';
 import { Link } from 'react-router-dom';
-import DemoContainer from './demo_user/demo_container';
+import DemoContainer from './demo/demo_container';
 const SplashComponent = () => {
 
   return (
