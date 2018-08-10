@@ -14,16 +14,18 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash_component';
+import HomePage from './home/home_page';
+
 const App = () => {
   return (
     <div>
-
       <Route path = "/" component={GreetingContainer} />
-      <Route exact path = "/" component={SplashComponent} />
-
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <ProtectedRoute exact path = "/home" component={HomePage} />
+        <AuthRoute exact path = "/" component={SplashComponent} />
+        <Redirect to="/" />
       </Switch>
     </div>
   );

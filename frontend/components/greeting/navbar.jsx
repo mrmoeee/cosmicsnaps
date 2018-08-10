@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 //&nbsp = break line without space.
-
 const Greeting = ({ currentUser, logout, location }) => {
 
   const sessionLinks = () => {
@@ -67,4 +66,4 @@ const Greeting = ({ currentUser, logout, location }) => {
   return currentUser ? personalGreeting() : sessionLinks();
 };
 
-export default Greeting;
+export default withRouter(Greeting);
