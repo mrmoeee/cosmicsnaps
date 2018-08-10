@@ -13,13 +13,14 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
+import ImageComponent from './image_component.jsx';
 const App = () => {
   return (
     <div>
-      <header>
+      
         <Route path="/" component={GreetingContainer} />
-      </header>
+        <AuthRoute exact path ="/" component={ImageComponent} />
+
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />

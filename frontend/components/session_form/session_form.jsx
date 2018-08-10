@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.removeErrors = this.removeErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -21,7 +22,9 @@ class SessionForm extends React.Component{
   update(field) {
     return (e) => this.setState({[field]: e.currentTarget.value});
   }
-
+  removeErrors() {
+    return (e) => this.props.clearErrors();
+  }
   renderErrors() {
     return (
       <ul>
@@ -34,46 +37,70 @@ class SessionForm extends React.Component{
     );
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     let display;
+    let title;
+    let buttontxt;
     if (this.props.formType === "signup") {
       display = "Already have an account?";
+      title = "Join CosmicSnaps";
+      buttontxt = "Sign Up";
     } else {
       display = "Don't have an account?";
+      title = "Log In to CosmicSnaps";
+      buttontxt = "Log In";
     }
     return (
       <div className="formType-form-container">
         <form onSubmit={this.handleSubmit} className="formType-form-box">
-
-          <br />
-
           <div className="formType-form">
-            <br/>
+            <div className="login-title">
+              <h1>{title}</h1>
+            </div>
+            <div className="username-box">
+              <div className="username-label">
+                <label>Email / Username
+                </label>
+              </div>
+              <div className="username-input">
+                <input type="text"
+                  value={this.state.username}
+                  placeholder="Email or Username"
+                  onChange={this.update('username')}
+                  onClick={this.removeErrors()}
+                  className="formType-input"
+                  />
+              </div>
+            </div>
+            <div className="password-box">
+              <label>Password
+                <div className="password-input">
+                  <input type="Password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update('password')}
+                    onClick={this.removeErrors()}
+                    className="formType-input"
+                    />
+                </div>
+              </label>
+            </div>
 
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="formType-input"
-                />
-            </label>
-            <br/>
-
-            <label>Password:
-              <input type="Password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="formType-input"
-                />
-            </label>
-            <br/>
-
-            <input className="session-submit"
-              type="submit"
-              value={this.props.formType}
-              />
-            {this.renderErrors()}
-            {display} {this.props.navLink}
+            <div className="session-submit-box">
+              <button type="submit" className="session-submit">{buttontxt}</button>
+            </div>
+            <div className="errors-div">
+              <div className="errors-box">
+                {this.renderErrors()}
+              </div>
+            </div>
+            <div className="session-prompt">
+              {display} {this.props.navLink}
+            </div>
           </div>
         </form>
       </div>

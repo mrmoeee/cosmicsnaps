@@ -1,0 +1,116 @@
+body {
+  background-color: #f7f8fa;
+}
+
+.nav-holder {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  z-index: 100;
+
+  .header-left-box {
+    margin-left: 35px;
+    a {
+      font-family: 'Raleway';
+      text-decoration: none;
+      font-weight: 200;
+      font-size: 18px;
+    }
+  }
+
+  .header-right-link-box {
+    display: flex;
+    flex-direction: row;
+
+    .header-right-signup-link {
+      a {
+        margin-right: 45px;
+        font-family: 'Raleway';
+        font-weight: normal;
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+      }
+
+    }
+
+    .header-right-login-link {
+      margin-right: 45px;
+      a {
+        font-family: 'Raleway';
+        font-weight: normal;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+
+.black {
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  .header-left-box a {
+    color: white;
+    font-weight: bold;
+  }
+
+  .header-right-login-link a {
+    color: white
+  }
+
+  .header-right-signup-link a {
+    font-weight: bold;
+    background-color: #0099e5;
+    border-radius: 35px;
+    padding: 8px 16px;
+  }
+
+  .title:hover {
+    color: #818181;
+  }
+
+  .header-right-signup-link a:hover{
+    background-color: #4cb7ec;
+  }
+
+  .header-right-login-link a:hover {
+    color: #818181;
+  }
+}
+
+.white {
+  border-bottom: 1px solid #f7f8fa;
+  color: black;
+  background-color: white;
+  .header-right-signup-link a {
+    background-color: #001e2d;
+    padding: 17px 18px ;
+  }
+
+  .header-right-login-link a {
+    color: #525558;
+  }
+  .header-left-box a {
+      color: black;
+  }
+
+  .title:hover {
+    color: #b266b2;
+  }
+
+  .header-right-login-link a:hover {
+    color: #b266b2;
+  }
+
+  .header-right-signup-link a:hover{
+    background-color: #333333;
+  }
+}

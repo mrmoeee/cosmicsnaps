@@ -1,0 +1,101 @@
+.formType-form-container{
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  font-family: 'Raleway';
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 18px;
+
+  .login-title {
+    text-align: center;
+    color: #515557;
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .formType-form-box {
+    width: 318px;
+    height: 450px;
+    padding: 32px 40px 24px;
+    background-color: white;
+    margin: 50px auto;
+    color: #848A8C;
+  }
+
+  .formType-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 318px;
+    height: 450px;
+  }
+
+  .formType-input {
+    font-size: 18px;
+    color: #848A8C;
+    font-weight: 100px;
+    width: 86.5%;
+    height: 33px;
+    border: 1px solid #dedfe1;
+    border-radius: 3px;
+    margin: 8px 0 17px 0;
+    padding: 0px 20px;
+    outline: none;
+
+  }
+
+
+  .session-submit-box {
+    padding-bottom: 20px;
+  }
+
+  .session-submit {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Raleway';
+    color: white;
+    font-weight: 100px;
+  }
+
+  .errors-div {
+    // padding: 50px;
+    // width: 30%;
+    text-align: center;
+
+    .errors-box {
+      height: 50px;
+    }
+  }
+
+  .session-prompt {
+    text-align: center;
+    margin-top: 80px;
+    a {
+      color: #b266b2;
+      text-decoration: none
+    }
+  }
+
+  .session-submit:hover {
+    background-color: purple;
+  }
+}
+
+::placeholder {
+  color: #c0c0c0;
+}
+
+.formType-input:focus {
+  outline: none;
+  border-color: #b266b2;
+  box-shadow: 0 0 10px #e5cce5;
+}
