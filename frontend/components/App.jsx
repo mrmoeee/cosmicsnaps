@@ -18,8 +18,8 @@ const App = () => {
   return (
     <div>
 
-        <Route path="/" component={GreetingContainer} />
-        <AuthRoute exact path ="/" component={SplashComponent} />
+      <Route path = "/" component={GreetingContainer} />
+      <Route exact path = "/" component={SplashComponent} />
 
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />

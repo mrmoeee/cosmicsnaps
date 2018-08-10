@@ -2,12 +2,12 @@ import React from 'react';
 import ImageComponent from './image_component';
 import { Link } from 'react-router-dom';
 import DemoContainer from './demo/demo_container';
-const SplashComponent = () => {
+import GreetingContainer from './greeting/greeting_container';
 
+const SplashComponent = () => {
   return (
     <div className="splash-container">
       <ImageComponent/>
-
       <div className="text-block">
         <div className="h1-container">
           <h1 className="h1-test">Billions upon billions of stars, captured into a timeless picture</h1>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //&nbsp = break line without space.
 
-
 const Greeting = ({ currentUser, logout, location }) => {
 
   const sessionLinks = () => {
@@ -47,6 +46,7 @@ const Greeting = ({ currentUser, logout, location }) => {
                   <Link to="/signup">Sign up</Link>
                 </div>
               </div>
+
               : null }
             </div>
           </ul>
