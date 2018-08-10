@@ -13,13 +13,13 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import ImageComponent from './image_component.jsx';
+import SplashComponent from './splash_component';
 const App = () => {
   return (
     <div>
-      
+
         <Route path="/" component={GreetingContainer} />
-        <AuthRoute exact path ="/" component={ImageComponent} />
+        <AuthRoute exact path ="/" component={SplashComponent} />
 
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
