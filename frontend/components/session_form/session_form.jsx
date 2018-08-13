@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
+import DemoContainer from '../demo/demo_container';
 
 class SessionForm extends React.Component{
   constructor(props) {
@@ -92,6 +93,9 @@ class SessionForm extends React.Component{
 
             <div className="session-submit-box">
               <button type="submit" className="session-submit">{buttontxt}</button>
+            </div>
+            <div className="demo-form-box">
+              <DemoContainer/>
             </div>
             <div className="errors-div">
               <div className="errors-box">

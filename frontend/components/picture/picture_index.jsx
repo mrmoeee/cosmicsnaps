@@ -13,15 +13,13 @@ class PictureIndex extends React.Component {
     const { pictures } = this.props;
 
     return (
-      <section className="pictures-container">
-        <div className="ul-container">
-          <ul className="ul-pic-container">
-            <div className="pic-conatainer">
-              {pictures.map(pic => <PictureIndexItem key={pic.id} picture={pic}/>)}
-            </div>
-          </ul>
-        </div>
-      </section>
+      <div className="ul-container">
+        <ul className="ul-pic-container">
+          <div className="pic-container">
+            {pictures.map(pic => <PictureIndexItem key={pic.id} picture={pic}/>)}
+          </div>
+        </ul>
+      </div>
     );
   }
 }

@@ -17,7 +17,7 @@ class DemoUser extends React.Component {
     return (
       <div className="demo-container">
         <button className="demo" onClick={this.handleDemo}>
-          DEMO LOGIN
+          Demo Log in
         </button>
       </div>
     );

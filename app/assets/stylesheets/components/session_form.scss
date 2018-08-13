@@ -35,7 +35,7 @@
   .formType-input {
     font-size: 18px;
     color: #848A8C;
-    font-weight: 100px;
+    font-weight: 100;
     width: 86.5%;
     height: 33px;
     border: 1px solid #dedfe1;
@@ -48,7 +48,7 @@
 
 
   .session-submit-box {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .session-submit {
@@ -63,7 +63,7 @@
     font-size: 18px;
     font-family: 'Raleway';
     color: white;
-    font-weight: 100px;
+    font-weight: 100;
   }
 
   .errors-div {
@@ -72,6 +72,7 @@
 
     .errors-box {
       height: 50px;
+      margin-top: 10px;
     }
   }
 
@@ -97,4 +98,27 @@
   outline: none;
   border-color: #b266b2;
   box-shadow: 0 0 10px #e5cce5;
+}
+
+
+.demo-form-box {
+  .demo-container{
+    padding: 0;
+    margin: 0;
+
+    .demo{
+      background-color: black;
+      border: 1px solid black;
+      border-radius: 3px;
+      height: 40px;
+      width: 100%;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: 'Raleway';
+      color: white;
+      font-weight: 100;
+    }
+}
 }

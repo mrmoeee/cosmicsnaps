@@ -1,14 +1,20 @@
 import React from 'react';
+import PictureIndexContainer from '../picture/picture_index_container';
+import SplashComponent from '../splash_component';
 
-class HomePage extends React.Component {
-
-  render ()  {
+const HomePage = ({ currentUser }) => {
+  if (currentUser) {
     return (
       <div>
-        <h1> FREE WILLIE </h1>
+        <PictureIndexContainer />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <SplashComponent />
       </div>
     );
   }
-}
-
+};
 export default HomePage;

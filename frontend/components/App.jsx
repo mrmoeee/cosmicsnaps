@@ -9,22 +9,22 @@
  } from 'react-router-dom';
 //"We are a way for the cosmos to know itself." - Carl Sagan
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import NavBarContainer from './navbar/navbar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash_component';
-import HomePage from './home/home_page';
+import HomePageContainer from './home/home_page_container';
 
 const App = () => {
   return (
     <div>
-      <Route path = "/" component={GreetingContainer} />
+      <Route path = "/" component={NavBarContainer} />
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <ProtectedRoute exact path = "/home" component={HomePage} />
-        <AuthRoute exact path = "/" component={SplashComponent} />
+        <Route exact path = "/" component={HomePageContainer} />
         <Redirect to="/"/>
       </Switch>
     </div>

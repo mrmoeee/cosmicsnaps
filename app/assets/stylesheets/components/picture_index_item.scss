@@ -1,8 +1,18 @@
-.pic-container {
-  width: 50%;
-  margin: 0;
-  img {
-    width: 100%;
-    height: auto;
+.ul-container {
+  padding-top: 50px;
+
+  .pic-container {
+    display: flex;
+    justify-content: center;
+    
+    .li-pictures {
+      width: 50%;
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }

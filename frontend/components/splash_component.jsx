@@ -23,7 +23,6 @@ const SplashComponent = () => {
         <FooterLinks />
       </footer>
     </div>
-
   );
 };
 
