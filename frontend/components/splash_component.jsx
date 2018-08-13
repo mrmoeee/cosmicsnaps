@@ -19,7 +19,7 @@ const SplashComponent = () => {
           <DemoContainer />
         </div>
       </div>
-      <footer>
+      <footer className="footer-container">
         <FooterLinks />
       </footer>
     </div>

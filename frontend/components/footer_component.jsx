@@ -4,8 +4,13 @@ class FooterLinks extends React.Component {
 
   render () {
     return (
-      <div>
-        <h1>ADD STUFF HERE DAWG COME ON</h1>
+      <div className="link-container">
+        <div>
+          <a href="https://www.linkedin.com/in/matthew-r-moe/">LinkedIn</a>
+        </div>
+        <div>
+          <a href="https://github.com/mrmoeee">GitHub</a>
+        </div>
       </div>
     );
   }
