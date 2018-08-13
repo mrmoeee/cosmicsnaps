@@ -3,9 +3,12 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
   background-color: black;
 
   a {
+    font-family: 'Raleway';
+    font-size: 28px;
     color: white;
     text-decoration: none;
   }
