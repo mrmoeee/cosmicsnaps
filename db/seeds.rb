@@ -8,3 +8,8 @@
 
 # ADD FIRST NAME AND LAST NAME TO FORM SHEET?
 User.create(username: "carlsagan", password: "123456");
+
+pic = Picture.create(title: 'This is an Astronaut', description: 'Floating through space', user_id: 6)
+pic.photo.attach(io: File.open('Users/mattmoe/Desktop/picdb/astro.jpg'), filename: 'astro.jpg')
+#Picture.create
+#Picture.photo.attach(io: , filename:)
