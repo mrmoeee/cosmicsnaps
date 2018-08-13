@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import PictureIndexContainer from '../picture/picture_index_container';
 //&nbsp = break line without space.
 const Greeting = ({ currentUser, logout, location }) => {
 
@@ -59,6 +60,7 @@ const Greeting = ({ currentUser, logout, location }) => {
     <hgroup className="header-group">
       <h2 className="header-name">Hi, { currentUser.username }!</h2>
       <button className="header-button" onClick={logout}>Log Out</button>
+      <PictureIndexContainer />
     </hgroup>
   );
 

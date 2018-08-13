@@ -4,4 +4,5 @@ class Picture < ApplicationRecord
 
   has_one_attached :photo
 
+  # add belongs to association for user_id
 end

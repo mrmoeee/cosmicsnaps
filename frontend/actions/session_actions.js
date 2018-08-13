@@ -19,6 +19,10 @@ export const receiveErrors = errors => ({
   errors
 });
 
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS
+});
+
 export const signup = (formUser) => dispatch => {
   return APIUtil.signup(formUser)
     .then(user => dispatch(receiveCurrentUser(user)),
@@ -44,5 +48,5 @@ export const logout = () => dispatch => {
 
 export const removeErrors = () => {
   return dispatch =>
-    dispatch({type: CLEAR_ERRORS});
+    dispatch(clearErrors());
 };
