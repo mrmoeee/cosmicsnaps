@@ -57,11 +57,13 @@ const Greeting = ({ currentUser, logout, location }) => {
 
 
   const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, { currentUser.username }!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+    <div>
+      <hgroup className="header-group">
+        <h2 className="header-name">Hi, { currentUser.username }!</h2>
+        <button className="header-button" onClick={logout}>Log Out</button>
+      </hgroup>
       <PictureIndexContainer />
-    </hgroup>
+    </div>
   );
 
 

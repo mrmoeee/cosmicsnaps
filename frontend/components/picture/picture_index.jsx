@@ -14,9 +14,13 @@ class PictureIndex extends React.Component {
 
     return (
       <section className="pictures-container">
-        <ul>
-          {pictures.map(pic => <PictureIndexItem key={pic.id} picture={pic}/>)}
-        </ul>
+        <div className="ul-container">
+          <ul className="ul-pic-container">
+            <div className="pic-conatainer">
+              {pictures.map(pic => <PictureIndexItem key={pic.id} picture={pic}/>)}
+            </div>
+          </ul>
+        </div>
       </section>
     );
   }

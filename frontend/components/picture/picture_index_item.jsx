@@ -4,13 +4,23 @@ import { Link } from 'react-router-dom';
 const PictureIndexItem = ({ picture }) => {
   return (
     <div className="picIndexItem-container">
-      <li>
-        <Link to={`/picture/${picture.id}`}>
-          <p>{picture.title}</p>
-          <img src={`${picture.photoUrl}`} />
-          <p>{picture.description}</p>
-        </Link>
-      </li>
+      <div className="li-container">
+        <li className="lic-pictures">
+          <div className="link-box">
+            <Link to={`/picture/${picture.id}`}>
+              <div className="pic-links-container">
+                <p>{picture.title}</p>
+              </div>
+              <div className="pic-container">
+                <img src={`${picture.photoUrl}`} />
+              </div>
+              <div className="pic-links-container">
+                <p>{picture.description}</p>
+              </div>
+            </Link>
+          </div>
+        </li>
+      </div>
     </div>
   );
 };

@@ -32,3 +32,6 @@ const App = () => {
 };
 
 export default App;
+
+
+//CREATE PICTURES / ID ROUTES!!!!@#!@$!@$!@$@#$
