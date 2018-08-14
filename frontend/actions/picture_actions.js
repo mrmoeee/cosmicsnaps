@@ -42,7 +42,6 @@ export const createPic = picture => dispatch => {
   return APIPicUtil.createPicture(picture)
     .then(serverPic => {
       dispatch(receivePicture(serverPic));
-      return serverPic;
     },
     err => (
       dispatch(receiveErrors(err.responseJSON))

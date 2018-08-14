@@ -12,13 +12,22 @@ body {
   z-index: 1000;
 
   .header-left-box {
-    margin-left: 35px;
+    margin-left: 45px;
+
+    .header-left-link {
+      display: flex;
+      align-items: center;
+    }
+
     a {
+      margin-right: 30px;
       font-family: 'Raleway';
       text-decoration: none;
       font-weight: 200;
       font-size: 18px;
     }
+
+
   }
 
   .header-right-link-box {

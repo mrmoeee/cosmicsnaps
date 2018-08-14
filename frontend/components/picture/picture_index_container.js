@@ -6,7 +6,9 @@ import { selectAllPictures } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
   pictures: selectAllPictures(state)
+
 });
+
 
 const mapDispatchToProps = dispatch => ({
   requestAllPictures: () => dispatch(requestAllPictures())

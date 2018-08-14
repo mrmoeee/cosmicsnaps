@@ -12,5 +12,6 @@ Picture.destroy_all
 
 User.create(username: "carlsagan", password: "123456");
 
-pic = Picture.create(title: 'This is an Astronaut', description: 'Floating through space', user_id: 6)
+pic = Picture.new(title: 'This is an Astronaut', description: 'Floating through space', user_id: 1)
 pic.photo.attach(io: File.open('./app/assets/images/astro.jpg'), filename: 'astro.jpg')
+pic.save!

@@ -3,7 +3,7 @@ import React from 'react';
 const ImageComponent = () => {
 
   return (
-    <img className="img-box" src={window.images.splash}/>
+    <img className="img" src={window.images.splash}/>
   );
 };
 

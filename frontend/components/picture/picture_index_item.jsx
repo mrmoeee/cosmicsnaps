@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const PictureIndexItem = ({ picture }) => {
   return (
-    <li className="li-pictures">
+    <div>
       <p>{picture.title}</p>
       <img src={`${picture.photoUrl}`} />
       <p>{picture.description}</p>
-    </li>
+    </div>
   );
 };
 
