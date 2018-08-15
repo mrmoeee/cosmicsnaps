@@ -43,11 +43,14 @@ export default class Form extends React.Component {
       formData.append('picture[photo]', this.state.photoFile);
     }
 
-    this.props.createPic(formData);
+    this.props.createPic(formData).then(() => {
+      const modal = document.getElementById('upload-modal');
+      modal.style.display = "none";
+    });
+
   }
 
   render () {
-    console.log(this.state);
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : null;
     return (
       <form onSubmit={this.handleSubmit}>
