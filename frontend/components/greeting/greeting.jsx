@@ -16,7 +16,7 @@ export default class Greeting extends React.Component {
     return (e) => {
       e.preventDefault();
       const modal = document.getElementById('upload-modal');
-      modal.style.display = "block";
+      modal.style.display = "flex";
     };
   }
 
@@ -28,7 +28,17 @@ export default class Greeting extends React.Component {
     };
   }
 
+
+
+
+
   render() {
+    window.onclick = (event) => {
+      const modal = document.getElementById('upload-modal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
     const { currentUser, logout } = this.props;
     return (
       <hgroup className="header-group">
@@ -69,12 +79,10 @@ export default class Greeting extends React.Component {
           </button>
           <div id="upload-modal" className="modal">
             <div className="modal-content">
-              <span onClick={this.modalClose()} className="close">x</span>
-              
+              <p onClick={this.modalClose()} className="close">x</p>
               <UploadFormContainer />
             </div>
           </div>
-          <div id="square"></div>
         </div>
 
       </hgroup>

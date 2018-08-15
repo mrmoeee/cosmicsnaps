@@ -31,6 +31,11 @@ export default class Form extends React.Component {
     if (file) {
       fileReader.readAsDataURL(file);
     }
+    const hide = document.getElementById('unhide');
+    const boxxy = document.getElementById('upload-link-boxxy');
+    hide.style.display = "flex";
+    boxxy.style.height = "80px";
+    boxxy.style.alignItems = "";
   }
 
   handleSubmit(e) {
@@ -47,41 +52,79 @@ export default class Form extends React.Component {
       const modal = document.getElementById('upload-modal');
       modal.style.display = "none";
     });
-
   }
 
   render () {
-    const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : null;
+    let fullPath = document.getElementById('upload');
+    if (fullPath) {
+      fullPath = fullPath.value;
+      let startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+      let filename = fullPath.substring(startIndex);
+      if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+      }
+      fullPath = filename;
+    }
+    const preview = this.state.photoUrl ? <img className="prev-img" src={this.state.photoUrl}/> : null;
+
     return (
+      <form onSubmit={this.handleSubmit} className="form">
+        <div className="upload-link-box" id="upload-link-boxxy">
+          <label className="upload-label">
+            <a className="select-file">
+              Select a file
+            </a>
+            <input
+              id ="upload"
+              type="file"
+              onChange={this.handleFile}
+              />
+          </label>
+          <div className="filename-box">
+            {fullPath ? `Filename: ${fullPath}` : 'File not yet chosen'}
+          </div>
+        </div>
 
-      
-      <form onSubmit={this.handleSubmit}>
-        <label >
-          Title:
-        </label>
-        <input
-          type="text"
-          id="title-body"
-          value={this.state.title}
-          onChange={this.handleInput('title')}
-          />
-
-        <label >
-          Description:
-        </label>
-        <textarea
-          id="description-body"
-          value={this.state.description}
-          onChange={this.handleInput('description')}>
-        </textarea>
-
-        <input
-          type="file"
-          onChange={this.handleFile}
-          />
-        <h3>Image Preview</h3>
-        {preview}
-        <button>Upload a picture</button>
+        <div id="unhide" className="hidden-content">
+          <div className="preview-container">
+            {preview}
+            <div className="preview-text">
+              <h3>Image Preview</h3>
+            </div>
+          </div>
+          <div className="form-input-container">
+            <ul className="form-list">
+              <li className="title-list">
+                <label >
+                  Title:
+                </label>
+                <div className="title-box">
+                  <input
+                    type="text"
+                    id="title-body"
+                    value={this.state.title}
+                    onChange={this.handleInput('title')}
+                    />
+                </div>
+              </li>
+              <li className="description-list">
+                <label >
+                  Description:
+                </label>
+                <div className="description-box">
+                  <textarea
+                    id="description-body"
+                    value={this.state.description}
+                    onChange={this.handleInput('description')}>
+                  </textarea>
+                </div>
+              </li>
+              <li className="upload-btn">
+                <button className="butt">Click to upload</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </form>
     );
   }

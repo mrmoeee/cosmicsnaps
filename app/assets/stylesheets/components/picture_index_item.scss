@@ -6,24 +6,33 @@
     justify-content: center;
     flex-direction: column-reverse;
     .li-pictures {
+      font-family: "Raleway";
+      font-weight: 100px;
       margin: 10px;
       background: white;
       border: 1px solid #eeeff2;
       width: 100%;
       margin: 10px;
 
+      .image-container .li-image{
+        width: 100%;
+      }
       .image-top-container {
         margin: 10px 15px;
       }
 
       .image-bottom-container {
         padding: 15px;
+
+        .image-bot-title {
+          font-size: 18px;
+        }
+
+        .image-bot-description {
+          font-size: 14px;
+        }
       }
 
-      img {
-        width: 100%;
-        height: auto;
-      }
     }
   }
 }

@@ -8,11 +8,11 @@ const PictureIndexItem = ({ picture }) => {
         <p>USERAVATARPLACEHOLDER</p>
       </div>
       <div className="image-container">
-        <img src={`${picture.photoUrl}`} />
+        <img className="li-image"src={`${picture.photoUrl}`} />
       </div>
       <div className="image-bottom-container">
-        <span>{picture.title}</span>
-        <p>{picture.description}</p>
+        <span className="image-bot-title">{picture.title}</span>
+        <p className="image-bot-description">{picture.description}</p>
       </div>
     </li>
   );
