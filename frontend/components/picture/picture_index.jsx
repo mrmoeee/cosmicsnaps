@@ -14,9 +14,12 @@ class PictureIndex extends React.Component {
     return (
       <div className="ul-container">
         <ul className="ul-pic-container">
-          <div className="pic-container">
-            {pictures.map(picture => <PictureIndexItem picture={picture} key={picture.id}/>)}
-          </div>
+            {pictures.map(picture => <PictureIndexItem
+              picture={picture}
+              key={picture.id}
+              deletePicture={this.props.deletePicture}
+              currentUser={this.props.currentUser}
+              />)}
         </ul>
       </div>
     );

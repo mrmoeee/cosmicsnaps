@@ -21,3 +21,18 @@ export const createPicture = (picture) => {
     processData: false
   });
 };
+
+export const editPicture = (picture) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/pictures/${picture.id}`,
+    data: picture
+  });
+};
+
+export const deletePicture = (picId) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `api/pictures/${picId}`
+  });
+};

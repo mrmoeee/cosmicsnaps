@@ -19,7 +19,13 @@ class Api::PicturesController < ApplicationController
   end
 
   def destroy
+    @picture = Picture.find(params[:id])
 
+    if @picture.destroy
+      render :show
+    else
+      render json: @picture.errors.full_messages, status: 422
+    end 
   end
 
   private

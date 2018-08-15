@@ -3,6 +3,7 @@ import * as APIPicUtil from '../util/picture_api_util';
 export const RECEIVE_ALL_PICTURES = 'RECEIVE_ALL_PICTURES';
 export const RECEIVE_PICTURE = 'RECEIVE_PICTURE';
 export const CREATE_PICTURE = 'CREATE_PICTURE';
+export const REMOVE_PICTURE = 'REMOVE_PICTURE';
 export const RECEIVE_PICTURE_ERRORS = 'RECEIVE_PICTURE_ERRORS';
 export const CLEAR_PIC_ERRORS = 'CLEAR_PIC_ERRORS';
 
@@ -25,9 +26,15 @@ export const clearErrors = () => ({
   type: CLEAR_PIC_ERRORS
 });
 
+export const removePicture = (picId) => ({
+  type: REMOVE_PICTURE,
+  picId
+});
+
 export const requestAllPictures = () => dispatch => {
   return APIPicUtil.fetchAllPictures()
-    .then(pictures => { dispatch(receiveAllPictures(pictures));});
+    .then(pictures => { dispatch(receiveAllPictures(pictures));}
+  );
 };
 
 export const requestSinglePicture = userId => dispatch => {
@@ -35,7 +42,8 @@ export const requestSinglePicture = userId => dispatch => {
     .then(picture => {
       dispatch(receivePicture(picture));
       return picture;
-    });
+    }
+  );
 };
 
 export const createPic = picture => dispatch => {
@@ -45,7 +53,18 @@ export const createPic = picture => dispatch => {
     },
     err => (
       dispatch(receiveErrors(err.responseJSON))
-    ));
+    )
+  );
+};
+
+export const editPicture = picture => dispatch => {
+  return APIPicUtil.editPicture(picture)
+    .then(serverPic => dispatch(receivePicture(serverPic)));
+};
+
+export const deletePicture = picId => dispatch => {
+  return APIPicUtil.deletePicture(picId)
+    .then(serverPic => dispatch(removePicture(picId)));
 };
 
 export const removeErrors = () => {

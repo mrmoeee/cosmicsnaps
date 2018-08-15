@@ -32,10 +32,9 @@ export default class Form extends React.Component {
       fileReader.readAsDataURL(file);
     }
     const hide = document.getElementById('unhide');
-    const boxxy = document.getElementById('upload-link-boxxy');
     hide.style.display = "flex";
+    const boxxy = document.getElementById('upload-link-boxxy');
     boxxy.style.height = "40px";
-    boxxy.style.alignItems = "";
   }
 
   handleSubmit(e) {
@@ -51,7 +50,17 @@ export default class Form extends React.Component {
     this.props.createPic(formData).then(() => {
       const modal = document.getElementById('upload-modal');
       modal.style.display = "none";
-    });
+    }).then(this.setState({
+      title: "",
+      description: "",
+      photoFile: null,
+      photoUrl: null
+    })).then(document.getElementById('formmy').reset());
+
+    const hide = document.getElementById('unhide');
+    hide.style.display = "none";
+    const boxxy = document.getElementById('upload-link-boxxy');
+    boxxy.style.height = "100%";
   }
 
   render () {
@@ -68,14 +77,14 @@ export default class Form extends React.Component {
     const preview = this.state.photoUrl ? <img className="prev-img" src={this.state.photoUrl}/> : null;
 
     return (
-      <form onSubmit={this.handleSubmit} className="form">
+      <form onSubmit={this.handleSubmit} className="form" id="formmy">
         <div className="upload-link-box" id="upload-link-boxxy">
           <label className="upload-label">
             <a className="select-file">
               Select a file
             </a>
             <input
-              id ="upload"
+              id="upload"
               type="file"
               onChange={this.handleFile}
               />
