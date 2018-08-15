@@ -34,7 +34,7 @@ export default class Form extends React.Component {
     const hide = document.getElementById('unhide');
     const boxxy = document.getElementById('upload-link-boxxy');
     hide.style.display = "flex";
-    boxxy.style.height = "80px";
+    boxxy.style.height = "40px";
     boxxy.style.alignItems = "";
   }
 
