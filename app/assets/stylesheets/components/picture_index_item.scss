@@ -4,10 +4,21 @@
   .pic-container {
     display: flex;
     justify-content: center;
-    
+    flex-direction: column-reverse;
     .li-pictures {
-      width: 50%;
-      margin: 0;
+      margin: 10px;
+      background: white;
+      border: 1px solid #eeeff2;
+      width: 100%;
+      margin: 10px;
+
+      .image-top-container {
+        margin: 10px 15px;
+      }
+
+      .image-bottom-container {
+        padding: 15px;
+      }
 
       img {
         width: 100%;

@@ -53,6 +53,8 @@ export default class Form extends React.Component {
   render () {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl}/> : null;
     return (
+
+      
       <form onSubmit={this.handleSubmit}>
         <label >
           Title:

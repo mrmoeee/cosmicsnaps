@@ -39,7 +39,27 @@ export default class Greeting extends React.Component {
             <img className="icon-img" src={window.icon.logo}/>
           </span>
           <div className="dropdown-content">
-            <button className="header-button" onClick={logout}>Log Out</button>
+            <ul className="links clearfix">
+              <li className="links-container">
+                <button className="header-button">PLACEHOLDER1</button>
+              </li>
+              <li className="links-container">
+                <button className="header-button">PLACEHOLDER2</button>
+              </li>
+            </ul>
+            <ul className="links clearfix">
+              <li className="links-container">
+                <button className="header-button">PLACEHOLDER3</button>
+              </li>
+              <li className="links-container">
+                <button className="header-button">PLACEHOLDER4</button>
+              </li>
+            </ul>
+            <ul className="links clearfix">
+              <li className="links-container">
+                <button className="header-button" onClick={logout}>Log Out</button>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -50,10 +70,11 @@ export default class Greeting extends React.Component {
           <div id="upload-modal" className="modal">
             <div className="modal-content">
               <span onClick={this.modalClose()} className="close">x</span>
-              <p>Some stupid text</p>
+              
               <UploadFormContainer />
             </div>
           </div>
+          <div id="square"></div>
         </div>
 
       </hgroup>

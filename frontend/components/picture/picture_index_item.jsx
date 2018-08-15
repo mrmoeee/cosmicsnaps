@@ -4,9 +4,16 @@ import { Link } from 'react-router-dom';
 const PictureIndexItem = ({ picture }) => {
   return (
     <li className="li-pictures">
-      <p>{picture.title}</p>
-      <img src={`${picture.photoUrl}`} />
-      <p>{picture.description}</p>
+      <div className="image-top-container">
+        <p>USERAVATARPLACEHOLDER</p>
+      </div>
+      <div className="image-container">
+        <img src={`${picture.photoUrl}`} />
+      </div>
+      <div className="image-bottom-container">
+        <span>{picture.title}</span>
+        <p>{picture.description}</p>
+      </div>
     </li>
   );
 };
