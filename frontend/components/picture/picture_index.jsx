@@ -15,11 +15,7 @@ class PictureIndex extends React.Component {
       <div className="ul-container">
         <ul className="ul-pic-container">
           <div className="pic-container">
-            {pictures.map(picture =>
-              <li className="li-pictures" key={picture.id}>
-                <PictureIndexItem picture={picture} />
-              </li>
-            )}
+            {pictures.map(picture => <PictureIndexItem picture={picture} key={picture.id}/>)}
           </div>
         </ul>
       </div>

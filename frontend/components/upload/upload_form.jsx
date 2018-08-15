@@ -16,9 +16,6 @@ export default class Form extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  componentDidMount() {
-    this.props.requestAllPictures();
-  }
 
   handleInput(field) {
     return (e) => this.setState({[field]: e.target.value});

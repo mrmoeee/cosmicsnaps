@@ -7,14 +7,12 @@ import {
 
 const picturesReducer = (state={}, action) => {
   Object.freeze(state);
-  let payload;
 
   switch (action.type) {
     case RECEIVE_ALL_PICTURES:
       return merge({}, state, action.pictures);
     case RECEIVE_PICTURE:
-      payload = action.payload;
-      return merge({}, state, {[payload.user_id]: payload});
+      return merge({}, state, {[action.picture.id]: action.picture});
     default:
       return state;
   }

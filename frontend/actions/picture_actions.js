@@ -11,9 +11,9 @@ export const receiveAllPictures = (pictures) => ({
   pictures
 });
 
-export const receivePicture = (payload) => ({
+export const receivePicture = (picture) => ({
   type: RECEIVE_PICTURE,
-  payload
+  picture
 });
 
 export const receiveErrors = errors => ({
