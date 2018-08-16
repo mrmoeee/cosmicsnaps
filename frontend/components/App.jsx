@@ -16,7 +16,10 @@ import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash_component';
 import HomePageContainer from './home/home_page_container';
+import ProfilePageContainer from './profile/profile_page_container';
+
 const App = () => {
+
   return (
     <div>
       <Route path = "/" component={NavBarContainer} />
@@ -24,6 +27,7 @@ const App = () => {
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path = "/" component={HomePageContainer} />
+        <ProtectedRoute exact path="/:username" component={ProfilePageContainer} />
         <Redirect to="/"/>
       </Switch>
     </div>

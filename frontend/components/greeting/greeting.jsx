@@ -28,10 +28,6 @@ export default class Greeting extends React.Component {
     };
   }
 
-
-
-
-
   render() {
     window.onclick = (event) => {
       const modal = document.getElementById('upload-modal');
@@ -51,7 +47,7 @@ export default class Greeting extends React.Component {
           <div className="dropdown-content">
             <ul className="links clearfix">
               <li className="links-container">
-                <button className="header-button">PLACEHOLDER1</button>
+                <Link to={`/${this.props.currentUser.username}`} className="header-button">Astro Page</Link>
               </li>
               <li className="links-container">
                 <button className="header-button">PLACEHOLDER2</button>

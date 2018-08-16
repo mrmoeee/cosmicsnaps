@@ -11,6 +11,7 @@ class PictureIndex extends React.Component {
   }
 
   componentDidMount() {
+    console.log('mounted');
     this.props.requestAllPictures();
     this.props.fetchUsers();
   }
