@@ -8,13 +8,16 @@ class Api::PicturesController < ApplicationController
 
   end
 
+  def update
+  end
+
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
     if @picture.save!
       render :show
     else
-      render json: @picture.errors.full_messages
+      render json: @picture.errors.full_messages, status: 422
     end
   end
 
@@ -25,7 +28,7 @@ class Api::PicturesController < ApplicationController
       render :show
     else
       render json: @picture.errors.full_messages, status: 422
-    end 
+    end
   end
 
   private

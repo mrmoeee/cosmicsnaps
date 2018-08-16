@@ -6,3 +6,21 @@
   max-width: 600px;
 
 }
+
+
+#load-bar {
+  background: black;
+  opacity: 1;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+  height: 1600px;
+}
+
+#load-bar > #loading {
+  color: red;
+  width: 120px;
+  height: 24px;
+  margin: 300px auto;
+}

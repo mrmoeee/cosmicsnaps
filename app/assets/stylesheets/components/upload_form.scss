@@ -1,18 +1,17 @@
 .upload-label {
   cursor: pointer;
 }
-.select-file {
+.upload-label {
   font-size: 16px;
   position: relative;
   overflow: hidden;
 
 }
 
-.select-file+input {
-  position: absolute;
-  top: 0;
-  left: 0;
+.upload-label input {
+  width: 0;
   opacity: 0;
+  display: none;
 }
 .form {
   height: 100%;
@@ -25,19 +24,32 @@
     align-items: center;
     flex-direction: column;
 
-    .upload-label .select-file{
-      padding: 10px;
-      background: black;
-      color: white;
-      border-radius: 3px;
-    }
-    .filename-box {
-      margin-top: 20px;
+    .label-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .upload-label {
+        width: 140px;
+        padding: 5px;
+        background: black;
+        color: white;
+        border-radius: 3px;
+      }
+      .upload-label:hover {
+        background-color: #b266b2;
+      }
     }
 
-    .upload-label .select-file:hover {
-      background-color: #b266b2;
+    .label-box:hover {
+      cursor: pointer;
     }
+
+    .filename-box {
+      margin-top: 10px;
+    }
+
   }
 }
 

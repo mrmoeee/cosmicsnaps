@@ -5,12 +5,20 @@ import PictureIndexItem from './picture_index_item';
 
 class PictureIndex extends React.Component {
 
-  componentDidMount() {
-    this.props.requestAllPictures();
+  constructor(props) {
+    super(props);
+
   }
 
+  componentDidMount() {
+    this.props.requestAllPictures();
+    this.props.fetchUsers();
+  }
+
+
+
   render() {
-    const { pictures } = this.props;
+    const { pictures, deletePicture, currentUser } = this.props;
     return (
       <div className="ul-container">
         <ul className="ul-pic-container">
@@ -19,6 +27,7 @@ class PictureIndex extends React.Component {
               key={picture.id}
               deletePicture={this.props.deletePicture}
               currentUser={this.props.currentUser}
+              users={this.props.users}
               />)}
         </ul>
       </div>

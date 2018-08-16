@@ -33,14 +33,37 @@
       }
 
       .image-bottom-container {
-        padding: 15px;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
 
         .image-bot-title {
           font-size: 18px;
+          padding: 10px 0;
         }
 
         .image-bot-description {
           font-size: 14px;
+          margin: 10px auto;
+        }
+      }
+
+      .delete-container {
+        display: flex;
+        justify-content: flex-end;
+
+        .trashy {
+          border: none;
+          outline: none;
+          background: black;
+          color: white;
+          margin-right: 15px;
+          margin-bottom: 15px;
+          border-radius: 3px;
+          
+          .material-icons {
+            font-size: 30px;
+          }
         }
       }
 

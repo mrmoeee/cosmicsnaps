@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PictureIndexItem = ({ picture, deletePicture, currentUser }) => {
+//{Object.values(users[picture.userId])}
+
+const PictureIndexItem = ({ picture, deletePicture, currentUser, users }) => {
+
+
   return (
 
       <li className="li-pictures">
         <div className="image-top-container">
-          <p>USERAVATARPLACEHOLDER</p>
+          <p>{users[picture.userId].username}</p>
         </div>
         <div className="image-container">
           <img className="li-image"src={`${picture.photoUrl}`} />
@@ -14,8 +18,12 @@ const PictureIndexItem = ({ picture, deletePicture, currentUser }) => {
         <div className="image-bottom-container">
           <span className="image-bot-title">{picture.title}</span>
           <p className="image-bot-description">{picture.description}</p>
+        </div>
+        <div className="delete-container">
           {picture.userId === currentUser.id ?
-            <button onClick={() => deletePicture(picture.id)}>DELETE</button>
+            <button className="trashy" onClick={() => deletePicture(picture.id)}>
+              <i className="material-icons">delete_forever</i>
+            </button>
             : null
           }
         </div>

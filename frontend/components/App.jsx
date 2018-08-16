@@ -16,7 +16,6 @@ import GreetingContainer from './greeting/greeting_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash_component';
 import HomePageContainer from './home/home_page_container';
-
 const App = () => {
   return (
     <div>

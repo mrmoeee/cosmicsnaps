@@ -79,16 +79,16 @@ export default class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className="form" id="formmy">
         <div className="upload-link-box" id="upload-link-boxxy">
-          <label className="upload-label">
-            <a className="select-file">
-              Select a file
-            </a>
-            <input
-              id="upload"
-              type="file"
-              onChange={this.handleFile}
-              />
-          </label>
+          <div className="label-box">
+            <label className="upload-label">
+              <span>Select a file</span>
+              <input
+                id="upload"
+                type="file"
+                onChange={this.handleFile}
+                />
+            </label>
+          </div>
           <div className="filename-box">
             {fullPath ? `Filename: ${fullPath}` : 'File not yet chosen'}
           </div>
