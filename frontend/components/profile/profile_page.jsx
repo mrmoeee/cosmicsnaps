@@ -11,6 +11,7 @@ class ProfilePage extends React.Component {
 
   componentDidMount() {
     this.props.requestAllPictures();
+    //FETCH USER HOME PAGE REFACTOR!
     this.props.fetchUsers();
   }
 
@@ -22,12 +23,28 @@ class ProfilePage extends React.Component {
     }
 
     return (
-      <ul>
-        {pics.map(picture => picture.userId === userId ?
-          <li key={picture.id}>
-            <img src={`${picture.photoUrl}`}/>
-          </li> : null)}
-      </ul>
+      <div className="content">
+        <div className="profile-header-with-cover">
+          <div className="user-details">
+            <h1>{this.props.username}</h1>
+          </div>
+        </div>
+        <div className="profile-nav-bar">
+        </div>
+        <div className="profile-body">
+          BODYYYYY
+          <div className="full-grid-container">
+            <div className="grid-container">
+                {pics.map(picture => picture.userId === userId ?
+                    <div key={picture.id}className="img-box">
+                      
+                      <img className="user-image"src={`${picture.photoUrl}`}/>
+                    </div>
+                  : null)}
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }

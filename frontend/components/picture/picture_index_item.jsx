@@ -18,14 +18,14 @@ const PictureIndexItem = ({ picture, deletePicture, currentUser, users }) => {
         <div className="image-bottom-container">
           <span className="image-bot-title">{picture.title}</span>
           <p className="image-bot-description">{picture.description}</p>
-        </div>
-        <div className="delete-container">
-          {picture.userId === currentUser.id ?
-            <button className="trashy" onClick={() => deletePicture(picture.id)}>
-              <i className="material-icons">delete_forever</i>
-            </button>
-            : null
-          }
+          <div className="delete-container">
+            {picture.userId === currentUser.id ?
+              <button className="trashy" onClick={() => deletePicture(picture.id)}>
+                <i className="material-icons">delete_forever</i>
+              </button>
+              : null
+            }
+          </div>
         </div>
       </li>
 
