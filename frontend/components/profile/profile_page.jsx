@@ -28,7 +28,7 @@ class ProfilePage extends React.Component {
     }
     if (this.props.pictures.length === 0) {
       return (
-        <img src={window.loader.loader1} />
+        <img src={window.loader.loader} />
       );
     }
 
