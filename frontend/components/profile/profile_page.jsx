@@ -15,16 +15,29 @@ class ProfilePage extends React.Component {
     this.props.fetchUsers();
   }
 
+  // CREATE A BUTTON IN RENDER ?! OR SOMEWHERE?
+  setBackground(src) {
+    document.getElementById('background-img').src = `${src}`;
+  }
+
   render() {
     let pics;
     const { userId, pictures } = this.props;
     if (this.props.pictures) {
       pics = this.props.pictures;
     }
+    if (this.props.pictures.length === 0) {
+      return (
+        <img src={window.loader.loader} />
+      );
+    }
 
     return (
       <div className="content">
         <div className="profile-header-with-cover">
+          <div className="cover-wrap">
+            <img id="background-img" src="" />
+          </div>
           <div className="user-details">
             <h1>{this.props.username}</h1>
           </div>
@@ -37,7 +50,7 @@ class ProfilePage extends React.Component {
             <div className="grid-container">
                 {pics.map(picture => picture.userId === userId ?
                     <div key={picture.id}className="img-box">
-                      
+
                       <img className="user-image"src={`${picture.photoUrl}`}/>
                     </div>
                   : null)}

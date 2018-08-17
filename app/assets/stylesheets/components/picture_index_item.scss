@@ -7,21 +7,21 @@
 
     .li-pictures {
       font-family: "Raleway";
-      font-weight: 100px;
-      margin: 10px;
+      font-weight: 100;
       background: white;
       border: 1px solid #eeeff2;
+      border-radius: 5px;
       width: 100%;
-      margin: 10px;
-      max-height: 80vh;
+      margin: 10px auto;
+      max-height: 100vh;
 
       .image-container {
         max-width: 100%;
-        max-height: 80vh;
+        max-height: 100vh;
         display: flex;
         justify-content: center;
-
         .li-image{
+          border-radius: 3px;
           max-height: 50vh;
           max-width: 100%;
           object-fit: scale-down;
@@ -30,7 +30,35 @@
 
 
       .image-top-container {
+        display: flex;
+        align-items: center;
         margin: 10px 15px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 500;
+
+
+        .img-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          height: 50px;
+          width: auto;
+          border: 1px solid black;
+          border-radius: 3px;
+        }
+        img {
+          height: auto;
+          width: 40px;
+          border: 1px solid black;
+          border-radius: 3px;
+          background: black;
+        }
+
+        .username-box {
+          padding-left: 20px;
+        }
       }
 
       .image-bottom-container {
@@ -39,12 +67,12 @@
         padding-right: 15px;
 
         .image-bot-title {
-          font-size: 18px;
+          font-size: 28px;
           padding: 10px 0;
         }
 
         .image-bot-description {
-          font-size: 14px;
+          font-size: 18px;
           margin: 10px auto;
         }
 
@@ -57,9 +85,10 @@
           outline: none;
           background: black;
           color: white;
-          margin-right: 15px;
-          margin-bottom: 15px;
           border-radius: 3px;
+          left: -10px;
+          position: relative;
+          bottom: 26px;
 
           .material-icons {
             font-size: 30px;

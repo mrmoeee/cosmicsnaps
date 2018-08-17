@@ -5,10 +5,10 @@ export const fetchAllPictures = () => {
   });
 };
 
-export const fetchPicture = (userId) => {
+export const fetchPicture = (picId) => {
   return $.ajax({
     method: 'GET',
-    url: `api/pictures/${userId}`
+    url: `api/pictures/${picId}`
   });
 };
 

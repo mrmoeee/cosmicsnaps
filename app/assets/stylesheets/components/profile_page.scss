@@ -28,17 +28,17 @@
 
     margin: 3px;
     position: relative;
-    flex-grow: 3;
-    height: 300px;
+    flex-grow: 1;
+    height: 305px;
     overflow: hidden;
     border-radius: 3px;
 
     .user-image {
       min-width: 100%;
       max-width: 100%;
-      height: 300px;
+      height: 305px;
       object-fit: cover;
-      vertical-align: bottom;
+      vertical-align: baseline;
     }
   }
 }

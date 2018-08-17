@@ -14,6 +14,8 @@ export default class Form extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFile = this.handleFile.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.modalClose = this.modalClose.bind(this);
+    this.resetFields = this.resetFields.bind(this);
   }
 
 
@@ -50,13 +52,30 @@ export default class Form extends React.Component {
     this.props.createPic(formData).then(() => {
       const modal = document.getElementById('upload-modal');
       modal.style.display = "none";
-    }).then(this.setState({
+    }).then(this.resetFields())
+    .then(document.getElementById('formmy').reset());
+
+    this.resetFields();
+  }
+
+  modalClose() {
+    return (e) => {
+      e.preventDefault();
+      const modal = document.getElementById('upload-modal');
+      document.getElementById('formmy').reset();
+
+      this.resetFields();
+      modal.style.display = "none";
+    };
+  }
+
+  resetFields() {
+    this.setState({
       title: "",
       description: "",
       photoFile: null,
       photoUrl: null
-    })).then(document.getElementById('formmy').reset());
-
+    });
     const hide = document.getElementById('unhide');
     hide.style.display = "none";
     const boxxy = document.getElementById('upload-link-boxxy');
@@ -78,6 +97,7 @@ export default class Form extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit} className="form" id="formmy">
+        <p onClick={this.modalClose()} className="close">x</p>
         <div className="upload-link-box" id="upload-link-boxxy">
           <div className="label-box">
             <label className="upload-label">

@@ -8,7 +8,6 @@ export default class Greeting extends React.Component {
   constructor(props) {
     super(props);
 
-    this.modalClose = this.modalClose.bind(this);
     this.modalClick = this.modalClick.bind(this);
   }
 
@@ -17,14 +16,6 @@ export default class Greeting extends React.Component {
       e.preventDefault();
       const modal = document.getElementById('upload-modal');
       modal.style.display = "flex";
-    };
-  }
-
-  modalClose() {
-    return (e) => {
-      e.preventDefault();
-      const modal = document.getElementById('upload-modal');
-      modal.style.display = "none";
     };
   }
 
@@ -75,7 +66,7 @@ export default class Greeting extends React.Component {
           </button>
           <div id="upload-modal" className="modal">
             <div className="modal-content">
-              <p onClick={this.modalClose()} className="close">x</p>
+
               <UploadFormContainer />
             </div>
           </div>

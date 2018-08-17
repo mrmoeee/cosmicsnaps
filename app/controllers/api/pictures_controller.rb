@@ -5,7 +5,8 @@ class Api::PicturesController < ApplicationController
   end
 
   def show
-
+    @picture = Picture.find(params[:id])
+    render :show
   end
 
   def update

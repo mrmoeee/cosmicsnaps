@@ -10,10 +10,17 @@ const PictureIndexItem = ({ picture, deletePicture, currentUser, users }) => {
 
       <li className="li-pictures">
         <div className="image-top-container">
-          <p>{users[picture.userId].username}</p>
+          <div>
+            <img className="icon-img" src={window.icon.logo}/>
+          </div>
+          <div className="username-box">
+            {users[picture.userId].username}
+          </div>
         </div>
         <div className="image-container">
+
           <img className="li-image"src={`${picture.photoUrl}`} />
+
         </div>
         <div className="image-bottom-container">
           <span className="image-bot-title">{picture.title}</span>
