@@ -7,15 +7,25 @@ export default class Greeting extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+
+      modalOpen: false,
+    };
 
     this.modalClick = this.modalClick.bind(this);
+    this.modalClose = this.modalClose.bind(this);
+  }
+
+  modalClose() {
+    console.log("INVOKED CLOSE");
+    this.setState({modalOpen: false});
   }
 
   modalClick() {
     return (e) => {
+      console.log("INVOKED OPEN");
       e.preventDefault();
-      const modal = document.getElementById('upload-modal');
-      modal.style.display = "flex";
+      this.setState({modalOpen: true});
     };
   }
 
@@ -23,10 +33,18 @@ export default class Greeting extends React.Component {
     window.onclick = (event) => {
       const modal = document.getElementById('upload-modal');
       if (event.target === modal) {
-        modal.style.display = "none";
+        this.modalClose();
       }
     };
     const { currentUser, logout } = this.props;
+    const modall = this.state.modalOpen ? (
+        <div id="upload-modal" className="modal">
+          <div className="modal-content">
+            <UploadFormContainer modalClose={this.modalClose}/>
+          </div>
+        </div>
+    ) : null;
+    console.log("MODAL IS OPEN", modall);
     return (
       <hgroup className="header-group">
         <h2 className="header-name">PILOT: { currentUser.username }</h2>
@@ -59,19 +77,12 @@ export default class Greeting extends React.Component {
             </ul>
           </div>
         </div>
-
         <div className="modal-container">
           <button id="modal-btn" onClick={this.modalClick()}>
             <i className="material-icons">cloud_upload</i> Upload
-          </button>
-          <div id="upload-modal" className="modal">
-            <div className="modal-content">
-
-              <UploadFormContainer />
-            </div>
-          </div>
+            </button>
         </div>
-
+          {modall}
       </hgroup>
     );
   }

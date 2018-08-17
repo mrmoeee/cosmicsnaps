@@ -1,13 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EditFormContainer from '../upload/edit_form_container';
 
 //{Object.values(users[picture.userId])}
 
-const PictureIndexItem = ({ picture, deletePicture, currentUser, users }) => {
+class PictureIndexItem extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalOpen: false,
 
-  return (
+    };
+    this.modalClick = this.modalClick.bind(this);
+    this.modalClose = this.modalClose.bind(this);
+  }
+  modalClose() {
+    this.setState({modalOpen: false});
+  }
+  modalClick() {
+    return (e) => {
+      e.preventDefault();
+      this.setState({modalOpen: true});
+      // const modal = document.getElementById('upload-modal');
+      // modal.style.display = "flex";
+    };
+  }
 
+  render () {
+
+    const { picture, deletePicture, currentUser, users } = this.props;
+    const modal = this.state.modalOpen ? (
+      <div id="upload-modal" className="modal">
+        <div className="modal-content">
+          <EditFormContainer modalClose={this.modalClose} picture={picture}/>
+        </div>
+      </div>
+    )  : null;
+    console.log("MODAL", modal);
+    return (
       <li className="li-pictures">
         <div className="image-top-container">
           <div>
@@ -27,17 +58,26 @@ const PictureIndexItem = ({ picture, deletePicture, currentUser, users }) => {
           <p className="image-bot-description">{picture.description}</p>
           <div className="delete-container">
             {picture.userId === currentUser.id ?
+            <div>
               <button className="trashy" onClick={() => deletePicture(picture.id)}>
                 <i className="material-icons">delete_forever</i>
               </button>
-              : null
+
+                <button id="modal-btn"onClick={this.modalClick()}>
+                  editttt
+                </button>
+                {modal}
+
+            </div>
+            : null
             }
           </div>
         </div>
       </li>
+    );
+  }
+}
 
-  );
-};
 
 export default PictureIndexItem;
 

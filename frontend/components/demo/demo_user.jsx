@@ -9,8 +9,8 @@ class DemoUser extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    const carlsagan = { username: "carlsagan", password: "123456"};
-    this.props.login(carlsagan);
+    const astroadrift = { username: "astroadrift", password: "123456"};
+    this.props.login(astroadrift);
   }
 
   render() {

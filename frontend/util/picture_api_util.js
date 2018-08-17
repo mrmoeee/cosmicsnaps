@@ -13,6 +13,7 @@ export const fetchPicture = (picId) => {
 };
 
 export const createPicture = (picture) => {
+  console.log(picture);
   return $.ajax({
     method: 'POST',
     url: `api/pictures/`,
@@ -22,11 +23,13 @@ export const createPicture = (picture) => {
   });
 };
 
-export const editPicture = (picture) => {
+export const editPicture = (picture, id) => {
   return $.ajax({
     method: 'PATCH',
-    url: `api/pictures/${picture.id}`,
-    data: picture
+    url: `api/pictures/${id}`,
+    data: picture,
+    contentType: false,
+    processData: false
   });
 };
 

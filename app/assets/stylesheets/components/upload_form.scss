@@ -1,6 +1,9 @@
 .upload-label {
   cursor: pointer;
 }
+#boxxyy {
+  height: 40px;
+}
 .upload-label {
   font-size: 16px;
   position: relative;
@@ -46,15 +49,16 @@
       cursor: pointer;
     }
 
-    .filename-box {
-      margin-top: 10px;
-    }
 
   }
 }
+.filename-box {
+  text-align: center;
+  margin-top: 10px;
+}
 
 .hidden-content {
-  display: none;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 1200px;

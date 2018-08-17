@@ -3,18 +3,25 @@ import { withRouter } from 'react-router-dom';
 import UploadForm from './upload_form';
 import { createPic, requestAllPictures } from '../../actions/picture_actions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
+  picture: {
+        title: "",
+        description: "",
+        photoFile: null,
+        photoUrl: null
+      },
   pictures: state.entities.pictures,
-  userId: state.session.id
+  userId: state.session.id,
+  modalClose: ownProps.modalClose
 });
 
 const mapDispatchToProps = dispatch => ({
-  createPic: (picture) => dispatch(createPic(picture)),
+  action: (picture) => dispatch(createPic(picture)),
   requestAllPictures: () => dispatch(requestAllPictures())
 });
 
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(UploadForm);
+)(UploadForm));

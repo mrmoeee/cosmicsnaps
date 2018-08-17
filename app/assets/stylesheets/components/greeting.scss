@@ -4,7 +4,7 @@
 }
 
 .modal {
-  display: none;
+  display: flex;
   justify-content: center;
   position: fixed;
   z-index: 1;
@@ -68,6 +68,7 @@
     height: 50px;
     padding-right: 22px;
     margin-right: 45px;
+    margin-left: 8px;
     font-size: 14px;
     font-weight: 100;
     color: white;
@@ -92,10 +93,11 @@
 
   .dropdown {
     font-family: 'Raleway';
-    padding-left: 8px;
-    padding-right: 8px;
-    position: relative;
-    display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  display: flex;
+  height: 50px;
 
     .img-box {
       display: flex;
@@ -106,24 +108,26 @@
       width: auto;
       border: 1px solid black;
       border-radius: 3px;
-    }
-    img {
-      height: auto;
-      width: 40px;
-      border: 1px solid black;
-      border-radius: 3px;
-      background: black;
-    }
 
+      img {
+        height: auto;
+        width: 40px;
+        border: 1px solid black;
+        border-radius: 3px;
+        background: black;
+      }
+    }
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      right: 8px;
-      left: auto;
       min-width: 140px;
-      z-index: 2;
+      z-index: 1;
+      top: 50px;
     }
+
+
+
 
     .material-icons {
       font-size: 40px;

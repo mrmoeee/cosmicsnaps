@@ -57,8 +57,8 @@ export const createPic = picture => dispatch => {
   );
 };
 
-export const editPicture = picture => dispatch => {
-  return APIPicUtil.editPicture(picture)
+export const editPicture = (picture, picId) => dispatch => {
+  return APIPicUtil.editPicture(picture, picId)
     .then(serverPic => dispatch(receivePicture(serverPic)));
 };
 

@@ -10,6 +10,12 @@ class Api::PicturesController < ApplicationController
   end
 
   def update
+    @picture = Picture.find(params[:id])
+    if @picture.update(picture_params)
+      render :show
+    else
+      render json: @picture.errors.full_messages, status: 422
+    end
   end
 
   def create
