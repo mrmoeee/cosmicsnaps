@@ -17,13 +17,11 @@ export default class Greeting extends React.Component {
   }
 
   modalClose() {
-    console.log("INVOKED CLOSE");
     this.setState({modalOpen: false});
   }
 
   modalClick() {
     return (e) => {
-      console.log("INVOKED OPEN");
       e.preventDefault();
       this.setState({modalOpen: true});
     };
@@ -44,7 +42,6 @@ export default class Greeting extends React.Component {
           </div>
         </div>
     ) : null;
-    console.log("MODAL IS OPEN", modall);
     return (
       <hgroup className="header-group">
         <h2 className="header-name">PILOT: { currentUser.username }</h2>

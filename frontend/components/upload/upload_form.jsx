@@ -48,7 +48,6 @@ export default class Form extends React.Component {
       }).then(this.props.modalClose())
       .then(document.getElementById('formmy').reset());
     } else {
-      console.log('this',this);
       this.props.action(formData).then(() => {
         const modal = document.getElementById('upload-modal');
       }).then(this.props.modalClose());
@@ -119,7 +118,6 @@ export default class Form extends React.Component {
         </div>
       </div>;
     }
-    console.log('boxxxyxyxyxyyx', uploadLinkBoxxy);
 
     const preview = this.state.photoUrl ? <img className="prev-img" src={this.state.photoUrl}/> : null;
     return (

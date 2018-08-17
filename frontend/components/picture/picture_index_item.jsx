@@ -37,7 +37,6 @@ class PictureIndexItem extends React.Component {
         </div>
       </div>
     )  : null;
-    console.log("MODAL", modal);
     return (
       <li className="li-pictures">
         <div className="image-top-container">
