@@ -80,14 +80,14 @@ As seen in the gifs above, images will be scaled  according to the size of their
 
 ### Versatile Code
 ```javascript
-#Create container
+#UploadPicture container
 const mapStateToProps = (state, ownProps) => ({
   picture: {
         title: "",
         description: "",
         photoFile: null,
         photoUrl: null
-#Edit container
+#EditPicture container
 const mapStateToProps = (state, ownProps) => ({
   picture: ownProps.picture,
   userId: state.session.id,
@@ -95,12 +95,12 @@ const mapStateToProps = (state, ownProps) => ({
 When researching and developing ways to create CRUD for the pictures, I noticed that there were ways to keep the code dry. I passed two types of picture objects in these two different containers as a picture variable to UploadForm. I also named createPic as action, and updatePicture as action, so that in the upload form no matter what was being passed in it would run the action with the given picture.
 
 ```javascript
-#Edit container
+#EditPicture container
 const mapDispatchToProps = dispatch => ({
   action: (pic, picId) => dispatch(editPicture(pic, picId)),
   requestAllPictures: () => dispatch(requestAllPictures())
 });
-#create container
+#UploadPicture container
 const mapDispatchToProps = dispatch => ({
   action: (picture) => dispatch(createPic(picture)),
   requestAllPictures: () => dispatch(requestAllPictures())
