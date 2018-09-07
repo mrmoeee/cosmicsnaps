@@ -109,7 +109,7 @@ const mapDispatchToProps = dispatch => ({
 After this logic was set, I had to render EditFormContainer, and UploadFormContainer in the right places, and then the functionality of editing and uploading pictures are done!
 
 ### Project Design
-CosmicSnaps was created with a space theme in mind. A place where Users can share awestricken pictures of outer world attractions. I was focused on a core set of features that were made to be ran bug free.  
+CosmicSnaps was created with a space theme in mind. A place where Users can share awestricken pictures of outer world attractions. I was focused on a core set of features that were made to ran bug free.  
 
 ### Future Features
 * Adding an image overlay allowing for likes, and add to gallery.
