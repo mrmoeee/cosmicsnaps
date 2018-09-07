@@ -6,7 +6,7 @@ CosmicSnaps is an image hosting site inspired by 500px. A place where astronauts
 
 I designed and built this project within a two-week timeframe.
 
-This is project utilizes React.js and Redux on the front end, Rails and PostgreSQL on the backend.
+This project utilizes React.js and Redux on the front end, Rails and PostgreSQL on the backend.
 I plan to refactor my code, and keep on adding improvements in the future.
 
 ## Features
