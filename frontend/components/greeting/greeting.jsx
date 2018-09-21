@@ -44,7 +44,7 @@ export default class Greeting extends React.Component {
     ) : null;
     return (
       <hgroup className="header-group">
-        <h2 className="header-name">PILOT: { currentUser.username }</h2>
+        <h2 className="header-name">USER: { currentUser.username }</h2>
 
         <div className="dropdown">
           <span className="img-box">
