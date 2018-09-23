@@ -60,7 +60,13 @@
   justify-content: center;
   align-items: center;
   font-family: 'Raleway';
+  color: white; 
+  // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
+  .header-name {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
   #modal-btn {
     display: flex;
     align-items: center;
@@ -86,6 +92,7 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+
   }
 
   #modal-btn:hover{
@@ -107,7 +114,6 @@
       background-color: black;
       height: 50px;
       width: auto;
-      border: 1px solid black;
       border-radius: 3px;
 
       img {

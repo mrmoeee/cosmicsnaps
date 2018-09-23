@@ -1,5 +1,5 @@
 body {
-  background: #f7f8fa;
+  background: black;
 }
 
 .nav-holder {
@@ -100,10 +100,8 @@ body {
 }
 
 .white {
-  border-bottom: 1px solid #f7f8fa;
-  color: black;
-  background-color: white;
-
+  border-bottom: 1px solid white;
+  
   .header-right-signup-link a {
     background-color: #001e2d;
     padding: 17px 18px ;
@@ -113,7 +111,7 @@ body {
     color: #525558;
   }
   .header-left-box a {
-      color: black;
+    color: white;
   }
 
   .title:hover {
