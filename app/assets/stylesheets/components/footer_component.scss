@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
   background-color: black;
   height:100%;
+  padding: 20px;
   a {
     font-family: 'Raleway';
     font-size: 28px;
     color: white;
     text-decoration: none;
+    padding: 10px;
   }
 }

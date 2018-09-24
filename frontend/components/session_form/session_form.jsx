@@ -107,6 +107,9 @@ class SessionForm extends React.Component{
             </div>
           </div>
         </form>
+        <div className="particle p-1"></div>
+        <div className="particle p-2"></div>
+        <div className="particle p-3"></div>
       </div>
     );
   }
