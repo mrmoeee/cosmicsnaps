@@ -31,7 +31,8 @@ class ProfilePage extends React.Component {
         <img src={window.loader.loader} />
       );
     }
-
+    let profilePics = window.images.profiles;
+    let randomNum = Math.floor(Math.random(4));
     return (
       <div className="content">
         <div className="profile-header-with-cover">
@@ -39,13 +40,20 @@ class ProfilePage extends React.Component {
             <img id="background-img" src="" />
           </div>
           <div className="user-details">
-            <h1>{this.props.username}</h1>
+            <img className="profile-pic" src={profilePics[randomNum]}></img>
           </div>
         </div>
+        <div className="user-info">
+            {/* <h1 className="name-head">{this.props.username}</h1> */}
+
+            <p className="personal-name">Astro Drifty</p>
+            <p className="personal-desc">Hi, My name is astro, and I am a space enthusiast. I upload cool pictures of space</p>
+            
+        </div> 
         <div className="profile-nav-bar">
+        Photos
         </div>
         <div className="profile-body">
-          BODYYYYY
           <div className="full-grid-container">
             <div className="grid-container">
                 {pics.map(picture => picture.userId === userId ?

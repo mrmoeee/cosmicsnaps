@@ -7,7 +7,6 @@
 
 }
 
-
 #load-bar {
   background: black;
   opacity: 1;
@@ -23,4 +22,21 @@
   width: 120px;
   height: 24px;
   margin: 300px auto;
+}
+
+.bg-particle {
+  position: fixed;
+  //randomize startign from top left corner
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 1px; 
+  //generate random bg-particle posistions
+  @for $i from 0 to 100 {
+    &:nth-child(#{$i + 1}) {
+      transform: translate(random(100)*1vw, random(100)*1vh);
+      background: white;
+    }
+  }
+  z-index: -1;
 }

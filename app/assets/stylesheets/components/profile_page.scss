@@ -2,15 +2,58 @@
   padding-top: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+}
+
+.user-details {
+  height: 100px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Raleway';
+  color: white; 
+  margin-top: 180px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.personal-name, .personal-desc {
+  padding: 10px;
+}
+
+.profile-pic {
+  margin-top: 30px;
+  height: 250px;
+  width: 250px;
+  border-radius: 500px;
+  box-shadow: 1px 0px 10px 1px white;
+
+}
+
+.profile-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  height: 50px;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  box-shadow: 1px 0px 10px 2px white;
+
 }
 
 .profile-body {
-  background: #f7f8fa;
   padding: 20px 0;
   position: relative;
   min-height: 300px;
-
   padding: 20px 0;
+  color: white;
 }
 
 .full-grid-container {
@@ -40,5 +83,12 @@
       object-fit: cover;
       vertical-align: baseline;
     }
+
+    .user-image:hover {
+      cursor: pointer;
+      border-top: 3px solid white;
+    }
+
   }
+
 }

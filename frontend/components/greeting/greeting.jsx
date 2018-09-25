@@ -55,18 +55,18 @@ export default class Greeting extends React.Component {
               <li className="links-container">
                 <Link to={`/${this.props.currentUser.username}`} className="header-button">Astro Page</Link>
               </li>
-              <li className="links-container">
+              {/* <li className="links-container">
                 <button className="header-button">PLACEHOLDER2</button>
-              </li>
+              </li> */}
             </ul>
-            <ul className="links clearfix">
+            {/* <ul className="links clearfix">
               <li className="links-container">
                 <button className="header-button">PLACEHOLDER3</button>
               </li>
               <li className="links-container">
                 <button className="header-button">PLACEHOLDER4</button>
               </li>
-            </ul>
+            </ul> */}
             <ul className="links clearfix">
               <li className="links-container">
                 <button className="header-button" onClick={logout}>Log Out</button>
