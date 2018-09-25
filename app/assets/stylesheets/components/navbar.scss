@@ -19,13 +19,14 @@ body {
       align-items: center;
     }
 
-    a {
+    .a {
       margin-right: 30px;
       font-family: 'Raleway';
       text-decoration: none;
       font-weight: 200;
       font-size: 18px;
     }
+
 
 
   }
@@ -101,6 +102,7 @@ body {
 
 .white {
   border-bottom: 1px solid white;
+  box-shadow: 1px 0px 15px 5px white;
   
   .header-right-signup-link a {
     background-color: black;
@@ -124,4 +126,5 @@ body {
   .header-right-signup-link a:hover{
     background-color: #b266b2;
   }
+  
 }

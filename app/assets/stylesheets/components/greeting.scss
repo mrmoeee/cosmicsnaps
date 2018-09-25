@@ -124,6 +124,10 @@
         background: black;
       }
     }
+
+    .img-box:hover {
+      cursor: pointer;
+    }
     .dropdown-content {
       display: none;
       position: absolute;
