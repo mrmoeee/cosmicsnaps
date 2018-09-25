@@ -9,7 +9,6 @@
       font-family: "Raleway";
       font-weight: 100;
       background: white;
-      border: 1px solid #eeeff2;
       border-radius: 5px;
       width: 100%;
       margin: 10px auto;
@@ -20,17 +19,16 @@
         max-height: 100vh;
         display: flex;
         justify-content: center;
-        .li-image{
-          border-radius: 3px;
+
+        .li-image {
           max-height: 50vh;
           max-width: 100%;
           object-fit: scale-down;
         }
+        .li-image:hover {
+          cursor: pointer;
+        }
       }
-      .li-pictures:hover {
-        box-shadow: 1px 0px 15px 5px #b266b2;
-      }
-
 
       .image-top-container {
         display: flex;
@@ -89,9 +87,7 @@
           background: black;
           color: white;
           border-radius: 3px;
-          left: -10px;
-          position: relative;
-          bottom: 26px;
+         
 
           .material-icons {
             font-size: 30px;
@@ -101,9 +97,30 @@
         .trashy:hover {
           cursor: pointer;
         }
+        
+        .edit-btn {
+          position: relative;
+          border: none;
+          outline: none;
+          background: black;
+          color: white;
+          border-radius: 3px;
+          height: 35px;
+          width: 44px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
       }
     }
   }
+}
+
+.del-edit-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -36px;
 }
 
 #modal-btn {

@@ -57,13 +57,13 @@ class PictureIndexItem extends React.Component {
           <p className="image-bot-description">{picture.description}</p>
           <div className="delete-container">
             {picture.userId === currentUser.id ?
-            <div>
+            <div className="del-edit-box">
               <button className="trashy" onClick={() => deletePicture(picture.id)}>
                 <i className="material-icons">delete_forever</i>
               </button>
 
-                <button id="modal-btn"onClick={this.modalClick()}>
-                  editttt
+                <button className="edit-btn"onClick={this.modalClick()}>
+                  edit
                 </button>
                 {modal}
 
