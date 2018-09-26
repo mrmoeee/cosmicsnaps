@@ -7,8 +7,11 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_one_attached :profile_pic
   # has many stuff
   has_many :pictures
+
+  
   #has many stufff
 
   def self.find_by_credentials(username, password)

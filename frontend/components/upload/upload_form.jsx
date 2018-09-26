@@ -98,6 +98,7 @@ export default class Form extends React.Component {
               id="upload"
               type="file"
               onChange={this.handleFile}
+              accept="image/*"
               />
           </label>
         </div>
@@ -113,6 +114,7 @@ export default class Form extends React.Component {
               id="upload"
               type="file"
               onChange={this.handleFile}
+              accept="image/*"
               />
           </label>
         </div>
