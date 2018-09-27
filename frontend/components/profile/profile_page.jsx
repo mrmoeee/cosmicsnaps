@@ -33,6 +33,7 @@ class ProfilePage extends React.Component {
     }
     let profilePics = window.images.profiles;
     let randomNum = Math.floor(Math.random(4));
+    const { user } = this.props;
     return (
       <div className="content">
         <div className="profile-header-with-cover">
@@ -41,14 +42,14 @@ class ProfilePage extends React.Component {
           </div>
           <div className="user-details">
           {/* need to pass user.profile_pic */}
-            <img className="profile-pic" src={this.props.user.profilePic}></img>
+            <img className="profile-pic" src={user.profilePic}></img>
           </div>
         </div>
         <div className="user-info">
             {/* <h1 className="name-head">{this.props.username}</h1> */}
 
-            <p className="personal-name">Astro Drifty</p>
-            <p className="personal-desc">Hi, My name is astro, and I am a space enthusiast. I upload cool pictures of space</p>
+            <p className="personal-name">{user.username}</p>
+            <p className="personal-desc">Hi, I am a space enthusiast. I upload cool pictures of space</p>
             
         </div> 
         <div className="profile-nav-bar">
