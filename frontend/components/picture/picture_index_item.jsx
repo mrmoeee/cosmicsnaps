@@ -41,7 +41,7 @@ class PictureIndexItem extends React.Component {
       <li className="li-pictures">
         <div className="image-top-container">
           <div>
-            <img className="icon-img" src={window.icon.logo}/>
+            <img className="icon-img" src={users[picture.userId].profilePic}/>
           </div>
           <div className="username-box">
             {users[picture.userId].username}
