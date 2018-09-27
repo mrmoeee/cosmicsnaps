@@ -69,7 +69,7 @@ file45 = EzDownload.open('https://s3-us-west-1.amazonaws.com/cosmicsnaps-dev/pic
 pic45.photo.attach(io: file45, filename: 'mystic.jpg')
 pic45.save!
 
-user4 = User.create(username: "insaneastronautposse", password: "123456");
+user4 = User.create(username: "justanotherdrifter", password: "123456");
 user4.profile_pic.attach(io: File.open("./app/assets/images/star2.jpg"), filename: "star2.jpg")
 
 
