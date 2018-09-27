@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({
     username: ownProps.match.params.username,
     userId: userId,
-    pictures: Object.values(state.entities.pictures)
+    pictures: Object.values(state.entities.pictures),
+    user: state.entities.users[userId]
   });
 
 };

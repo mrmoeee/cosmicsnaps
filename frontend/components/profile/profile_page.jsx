@@ -40,7 +40,8 @@ class ProfilePage extends React.Component {
             <img id="background-img" src="" />
           </div>
           <div className="user-details">
-            <img className="profile-pic" src={profilePics[randomNum]}></img>
+          {/* need to pass user.profile_pic */}
+            <img className="profile-pic" src={this.props.user.profilePic}></img>
           </div>
         </div>
         <div className="user-info">

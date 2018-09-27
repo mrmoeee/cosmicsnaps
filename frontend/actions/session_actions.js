@@ -4,6 +4,12 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const EDIT_USER = 'EDIT_USER';
+
+export const editUserInfo = (user) => ({
+  type: EDIT_USER,
+  user
+});
 
 export const receiveAllUsers = (users) => ({
   type: RECEIVE_ALL_USERS,
@@ -61,4 +67,9 @@ export const logout = () => dispatch => {
 export const removeErrors = () => {
   return dispatch =>
     dispatch(clearErrors());
+};
+
+export const editUser = (user, id) => dispatch => {
+  return APIUtil.editUserInfo(user, id)
+    .then(serverUser => dispatch(editUserInfo(serverUser)));
 };

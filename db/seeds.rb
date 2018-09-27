@@ -10,9 +10,9 @@
 User.destroy_all
 Picture.destroy_all
 
-useradmin = User.create(username: "suiladicastronaut", password: "astronaut");
-
 user1 = User.create(username: "astroadrift", password: "123456");
+user1.profile_pic.attach(io: File.open("./app/assets/images/star3.jpg"), filename: "star3.jpg")
+
 pic = Picture.new(title: 'Astronaut', description: 'Floating through space', user_id: user1.id)
 pic.photo.attach(io: File.open('./app/assets/images/earthstar.jpg'), filename: 'earthstar.jpg')
 pic.save!
@@ -34,6 +34,7 @@ pic21.photo.attach(io: file21, filename: 'eaglenebula.jpg' )
 pic21.save!
 
 user2 = User.create(username: "emc2", password: "123456");
+user2.profile_pic.attach(io: File.open("./app/assets/images/star4.jpg"), filename: "star4.jpg")
 
 pic22 = Picture.new(title: 'Deep Blue', description: 'Red eye in the sky. Wishin I could fly', user_id: user2.id)
 file22 = EzDownload.open('https://s3-us-west-1.amazonaws.com/cosmicsnaps-dev/picdb/eclipse.jpg')
@@ -51,6 +52,8 @@ pic24.photo.attach(io: file24, filename: 'emergence.jpg' )
 pic24.save!
 
 user3 = User.create(username: "astronaut1", password: "123456");
+user3.profile_pic.attach(io: File.open("./app/assets/images/star1.jpg"), filename: "star1.jpg")
+
 
 pic43 = Picture.new(title: 'Astronaut in Action!', description: 'Spacing out for this picture. Might wonder how I took it', user_id: user3.id)
 pic43.photo.attach(io: File.open('./app/assets/images/astro.jpg'), filename: 'astro.jpg')
@@ -67,6 +70,8 @@ pic45.photo.attach(io: file45, filename: 'mystic.jpg')
 pic45.save!
 
 user4 = User.create(username: "insaneastronautposse", password: "123456");
+user4.profile_pic.attach(io: File.open("./app/assets/images/star2.jpg"), filename: "star2.jpg")
+
 
 pic64 = Picture.new(title: 'SpaceX', description: 'Hope this one does not fail', user_id: user4.id)
 file64 = EzDownload.open('https://s3-us-west-1.amazonaws.com/cosmicsnaps-dev/picdb/p23.jpeg')
