@@ -17,8 +17,8 @@
   flex-direction: column;
   font-family: 'Raleway';
   color: white; 
-  margin-top: 180px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   height: 100px;
 }
 
@@ -28,9 +28,9 @@
 
 .profile-pic {
   margin-top: 30px;
-  height: 250px;
-  width: 250px;
-  border-radius: 500px;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
   box-shadow: 1px 0px 10px 1px white;
 
 }
@@ -90,5 +90,48 @@
     }
 
   }
-
 }
+
+.no-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .no-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';
+
+    .no-placeholder {
+      filter: invert(1);
+      height: 125px;
+      border-radius: 3px;
+    }
+
+    img {
+      padding-bottom: 5px;
+    }
+    .p-title {
+      font-size: 24px;
+      padding-bottom: 15px;
+    }
+    p {
+      padding: 5px;
+    }
+  }
+}
+
+#modal-btn {
+  outline: none;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 38px;
+  border-radius: 3px;
+  color:black;
+  margin-top: 50px;
+}
+
+

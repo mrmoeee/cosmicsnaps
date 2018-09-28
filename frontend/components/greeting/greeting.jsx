@@ -79,7 +79,7 @@ export default class Greeting extends React.Component {
             <i className="material-icons">cloud_upload</i> Upload
             </button>
         </div>
-          {modall}
+        {modall}
       </hgroup>
     );
   }
