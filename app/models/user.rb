@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   attr_reader :password
 
-  validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
+  validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
   after_initialize :ensure_session_token
@@ -10,8 +10,7 @@ class User < ApplicationRecord
   has_one_attached :profile_pic
   # has many stuff
   has_many :pictures
-
-  
+  has_many :comments
   #has many stufff
 
   def self.find_by_credentials(username, password)
