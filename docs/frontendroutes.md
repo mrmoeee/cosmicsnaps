@@ -12,7 +12,7 @@ Main components
   * `Home Feed`
 * `/signin`
   * `SessionForm`
-* `/sigup`
+* `/signup`
   * `SessionForm`
 * `/photos/new`
   * `UploadPhotoForm`
@@ -24,8 +24,15 @@ Main components
   * `UserIndexItems`
 * `/users/:u_id`
   * `Profile Page`
-  * `InformationIndex`
-  * `InformationIndexItems`
-  * `PicturesContainer`
-  * `PicturesForm`
-  
+    * `InformationIndex`
+    * `InformationIndexItems`
+    * `PicturesContainer`
+      * `Pictures`
+        * `PictureItem`
+    * `PicturesForm`
+* `/comments/new`
+  * `CommentForm`
+* `/comments/:comment_id`
+  * `CommentShow`
+* `/comments/:comment_id`
+  * `CommentForm`

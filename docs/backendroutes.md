@@ -1,8 +1,4 @@
 
-Comments
-POST api/photos/photo_id/comment - comment on a current photo
-DELETE api/photos/photo_id/comment - delete comment on a current photo
-
 ### HTML
 * `GET StaticPagesController#root`
 ---
@@ -22,7 +18,13 @@ DELETE api/photos/photo_id/comment - delete comment on a current photo
 * `DELETE /api/photos/:p_id` - delete a photo
 * `PATCH /api/photos/:p_id` - update a photo's information
 ---
-### `comments`
+#### `comments`
+* `GET /api/comments` - return relevant comments (filtered by `data`/`params`)
+* `GET /api/comments/:id` - returns comment
 * `POST /api/photos/:p_id/comments` - displays photos comments, and allow for commenting
+* `PATCH /api/comments:id` - edit a comment
 * `DELETE /api/photos/:p_id/comments` - delete a comment on current p_id
 ---
+#### `likes`
+`POST /api/photos/:photo_id/likes` - like a photo
+`DELETE /api/photos/:photo_id/likes` - unlike a photo
