@@ -1,6 +1,6 @@
 # README
 
-[Live Demo](https://cosmicsnaps.herokuapp.com/)
+~~[Live Demo]~~ (updating)
 
 CosmicSnaps is an image hosting site inspired by 500px. A place where astronauts can share their cosmic related captures.
 
